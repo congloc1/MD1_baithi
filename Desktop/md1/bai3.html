@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let x =+prompt("nhập X");
+    function checkSNT(number){
+        let check = false
+        let count = 0;
+        if(number < 2){
+        check = false;
+        }
+        for (let i = 1; i <= number; i++) {
+            if(number % i === 0 ){
+                count ++
+            }
+        }
+        if(count === 2){
+            check = true;
+        }
+        return check;
+   }
+    function sumOfListPrime(){
+        console.log(checkSNT(x))
+        let sum=0;
+        for (let i = 0; i <= x; i++) {
+            if(checkSNT(i)){
+                sum += i
+            }
+        }
+        document.write(sum)
+    }
+    sumOfListPrime()
+   // sumOfListPrime(x);
+</script>
